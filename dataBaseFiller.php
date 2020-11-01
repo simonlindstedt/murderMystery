@@ -1,5 +1,9 @@
 <?php
 
+// For this script to work it requiers that the table is already existing in our database,
+// and that you download the .csv version of the mockaroo data from their site.
+// Then you need to create the variable $fileName and change the value of it to the .csv name (including .csv)
+
 declare(strict_types=1);
 
 function getKeys(array $array): string
@@ -20,7 +24,9 @@ function getReferences(array $array): string
   return implode(", ", $newKeys);
 }
 
-$file = fopen("employee_list_flakt_ab.csv", "r");
+// $fileName = "";
+$tableName = rtrim($fileName, ".csv");
+$file = fopen($fileName, "r");
 $CSVarray = [];
 $newArray = [];
 while (!feof($file)) {
@@ -54,7 +60,7 @@ try {
   throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
 
-$sql = "INSERT INTO employee_list_flakt_ab ($keys) VALUES ($refs)";
+$sql = "INSERT INTO $tableName ($keys) VALUES ($refs)";
 
 foreach ($newArray as $data) {
   $statement = $pdo->prepare($sql);
