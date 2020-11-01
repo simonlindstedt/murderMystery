@@ -1,6 +1,6 @@
 <?php
 
-// For this script to work it requiers that the table is already existing in our database,
+// For this script to work it requires that the table is already created in our database,
 // and that you download the .csv version of the mockaroo data from their site.
 // Then you need to create the variable $fileName and change the value of it to the .csv name (including .csv)
 
