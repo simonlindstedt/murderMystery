@@ -25,7 +25,7 @@ function getReferences(array $array): string
 }
 
 // $fileName = "";
-$tableName = rtrim($fileName, ".csv");
+$tableName = str_ireplace(".csv", "", $fileName);
 $file = fopen($fileName, "r");
 $CSVarray = [];
 $newArray = [];
@@ -60,7 +60,7 @@ try {
   throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
 
-$sql = "INSERT INTO $tableName ($keys) VALUES ($refs)";
+$sql = "INSERT INTO $tableName ($keys) VALUES ($refs);";
 
 foreach ($newArray as $data) {
   $statement = $pdo->prepare($sql);
