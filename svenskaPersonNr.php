@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-for ($i = 0; $i < 1000; $i++) {
+for ($i = 0; $i < 500; $i++) {
 
   $year = (string)rand(1920, 2020);
 
@@ -35,7 +35,7 @@ foreach ($uniquePersonalNumbers as $number) {
 
   $i++;
 
-  $sql = "UPDATE passport_database SET social_security_number = $number WHERE id = $i;\n";
+  $sql = "UPDATE missing_people SET social_security_number = $number WHERE id = $i;\n";
 
   fwrite($file, $sql);
 }
