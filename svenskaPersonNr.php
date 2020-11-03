@@ -35,7 +35,7 @@ foreach ($uniquePersonalNumbers as $number) {
 
   $i++;
 
-  $sql = "INSERT INTO passport_database (social_security_number) VALUES($number) WHERE id = $i;\n";
+  $sql = "UPDATE passport_database SET social_security_number = $number WHERE id = $i;\n";
 
   fwrite($file, $sql);
 }
