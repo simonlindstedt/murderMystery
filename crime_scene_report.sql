@@ -7,10 +7,11 @@
 -- Generation Time: 2020-11-03 15:37:34.4530
 -- -------------------------------------------------------------
 
+DROP TABLE crime_scene_report;
 
 CREATE TABLE crime_scene_report (
     id INTEGER,
-    case_opened data,
+    case_opened DATETIME,
     location VARCHAR,
    	address VARCHAR,
    	residents VARCHAR,
