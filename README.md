@@ -4,6 +4,8 @@
 
 ---
 
+<img src="dbdesign.png" width="100%">
+
 ## The Case:
 <br>
 
