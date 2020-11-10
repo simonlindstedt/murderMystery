@@ -4,8 +4,6 @@
 
 ---
 
-<img src="dbdesign.png" width="100%">
-
 ## The Case:
 
 <br>
@@ -16,8 +14,7 @@ The year is 2020, a man residing in Örgryte, Gothenburg, has passed away. The m
 
 ## Check your solution
 
-<br>
-Did you figure who Jane Doe really is?
+Did you figure who **Jane Doe** really is?
 <br>
 <br>
 
@@ -26,7 +23,6 @@ INSERT INTO solution (first_name, last_name) VALUES ('First name', 'Last name');
 SELECT value FROM solution;
 ```
 
-<br>
 <br>
 
 ---
